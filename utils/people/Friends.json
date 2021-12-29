@@ -1,0 +1,221 @@
+{
+    "results": [
+    {
+        "gender": "male",
+        "name": { "title": "mr", "first": "caleb", "last": "li" },
+        "location": {
+          "street": "8749 spey street",
+          "city": "hastings",
+          "state": "auckland",
+          "postcode": 11566,
+          "coordinates": {
+            "latitude": "-42.6436",
+            "longitude": "147.9855"
+          },
+          "timezone": {
+            "offset": "-5:00",
+            "description": "Eastern Time (US & Canada), Bogota, Lima"
+          }
+        },
+        "email": "caleb.li@example.com",
+        "login": {
+          "uuid": "f1b8b0db-5e89-4e13-b4dc-400d35df8b1d",
+          "username": "beautifulzebra310",
+          "password": "soccer12",
+          "salt": "Zpw10IRg",
+          "md5": "cf0afa90cb301404c9e7f4cffd974fa1",
+          "sha1": "5280dd5e549415f02005fc3d4ca71ddb6aade578",
+          "sha256":
+            "a553924fc0596c99e233d3fc8bcb12f5eab993b3b9bb8b34659548f17417005a"
+        },
+        "dob": { "date": "1990-06-23T22:37:11Z", "age": 28 },
+        "registered": { "date": "2011-01-12T18:42:03Z", "age": 7 },
+        "phone": "(337)-252-8124",
+        "cell": "(251)-335-4366",
+        "id": { "name": "", "value": null },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/men/51.jpg",
+          "medium":
+            "https://randomuser.me/api/portraits/med/men/51.jpg",
+          "thumbnail":
+            "https://randomuser.me/api/portraits/thumb/men/51.jpg"
+        },
+        "nat": "NZ"
+      },
+      {
+        "gender": "male",
+        "name": { "title": "mr", "first": "danny", "last": "soto" },
+        "location": {
+          "street": "1713 pecan acres ln",
+          "city": "wilmington",
+          "state": "arizona",
+          "postcode": 50646,
+          "coordinates": {
+            "latitude": "-82.1724",
+            "longitude": "174.4417"
+          },
+          "timezone": {
+            "offset": "+11:00",
+            "description": "Magadan, Solomon Islands, New Caledonia"
+          }
+        },
+        "email": "danny.soto@example.com",
+        "login": {
+          "uuid": "3d8865b4-93d3-4473-8254-87499f43df29",
+          "username": "beautifulelephant565",
+          "password": "phat",
+          "salt": "XEpE4xkV",
+          "md5": "5bf9a03e4be2f5103973f8b8e67ac656",
+          "sha1": "e1b85bd268eb21ece5bf44157d4c5adcee2b5f12",
+          "sha256":
+            "ad09d8bcd94ac28a90e5ef1de9d5ab75e8c3b3c826997aadfaaa061e84c8ef29"
+        },
+        "dob": { "date": "1991-11-13T03:41:13Z", "age": 27 },
+        "registered": { "date": "2005-11-17T16:20:14Z", "age": 12 },
+        "phone": "(174)-087-6960",
+        "cell": "(076)-077-2405",
+        "id": { "name": "SSN", "value": "172-72-1738" },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/men/0.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/0.jpg",
+          "thumbnail":
+            "https://randomuser.me/api/portraits/thumb/men/0.jpg"
+        },
+        "nat": "US"
+      },
+      {
+        "gender": "female",
+        "name": {
+          "title": "ms",
+          "first": "doris",
+          "last": "cunningham"
+        },
+        "location": {
+          "street": "339 oak lawn ave",
+          "city": "lansing",
+          "state": "pennsylvania",
+          "postcode": 49133,
+          "coordinates": {
+            "latitude": "86.8315",
+            "longitude": "-164.1876"
+          },
+          "timezone": { "offset": "+4:30", "description": "Kabul" }
+        },
+        "email": "doris.cunningham@example.com",
+        "login": {
+          "uuid": "7c747e62-cb13-48e3-82c7-0dcaf901ca1c",
+          "username": "silverfrog608",
+          "password": "trick",
+          "salt": "t2Fc2ojl",
+          "md5": "caa888d0f9419ff1f3e4ece83350fcdd",
+          "sha1": "36b8852e0971a6f2a7feef3fea9c4cbd205ea0ec",
+          "sha256":
+            "820cf00dddbfe8ea27419b518d99d5ea864b1d87587da0713daeca42deff8bf3"
+        },
+        "dob": { "date": "1983-04-22T13:48:33Z", "age": 35 },
+        "registered": { "date": "2011-06-02T03:29:54Z", "age": 7 },
+        "phone": "(569)-341-3885",
+        "cell": "(190)-160-3676",
+        "id": { "name": "SSN", "value": "549-18-2412" },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/women/34.jpg",
+          "medium":
+            "https://randomuser.me/api/portraits/med/women/34.jpg",
+          "thumbnail":
+            "https://randomuser.me/api/portraits/thumb/women/34.jpg"
+        },
+        "nat": "US"
+      },
+      {
+        "gender": "male",
+        "name": { "title": "mr", "first": "dylan", "last": "liu" },
+        "location": {
+          "street": "8271 20th ave",
+          "city": "maidstone",
+          "state": "northwest territories",
+          "postcode": "V3S 3W2",
+          "coordinates": {
+            "latitude": "46.4558",
+            "longitude": "-103.1429"
+          },
+          "timezone": {
+            "offset": "+9:30",
+            "description": "Adelaide, Darwin"
+          }
+        },
+        "email": "dylan.liu@example.com",
+        "login": {
+          "uuid": "7082c3c4-2c4d-4fa4-aca0-97b64d80d322",
+          "username": "lazycat470",
+          "password": "silence",
+          "salt": "1GI7Ko71",
+          "md5": "1e86bb10208b8158bc8b81e04d3f9da4",
+          "sha1": "7e7824cfc2d3520d8751496d3765775d8ff08796",
+          "sha256":
+            "3e64d12aaad75ca06b51e89ebdb0d2037e1181fd02d40e17b91eb6f3fc8727d1"
+        },
+        "dob": { "date": "1983-02-28T00:57:52Z", "age": 35 },
+        "registered": { "date": "2007-03-24T02:54:24Z", "age": 11 },
+        "phone": "937-464-7791",
+        "cell": "905-456-2520",
+        "id": { "name": "", "value": null },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/men/94.jpg",
+          "medium":
+            "https://randomuser.me/api/portraits/med/men/94.jpg",
+          "thumbnail":
+            "https://randomuser.me/api/portraits/thumb/men/94.jpg"
+        },
+        "nat": "CA"
+      },
+      {
+        "gender": "female",
+        "name": {
+          "title": "mrs",
+          "first": "delia",
+          "last": "van der weerd"
+        },
+        "location": {
+          "street": "7268 wittevrouwenstraat",
+          "city": "stichtse vecht",
+          "state": "gelderland",
+          "postcode": 78717,
+          "coordinates": {
+            "latitude": "75.7145",
+            "longitude": "87.2218"
+          },
+          "timezone": {
+            "offset": "+5:00",
+            "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+          }
+        },
+        "email": "delia.vanderweerd@example.com",
+        "login": {
+          "uuid": "59b9599f-6625-4cd8-bf11-a05bc987f3e3",
+          "username": "bigmouse621",
+          "password": "dabears",
+          "salt": "9kLinv8k",
+          "md5": "099abaeee16ac9d20843897a2fdbee8b",
+          "sha1": "5baf1ee72733132377d19b50ac4222773d437ce8",
+          "sha256":
+            "edfc2f2ddd34d72037babed6951274f781a7eaf64add0494b08ce597873bdf15"
+        },
+        "dob": { "date": "1965-02-06T22:52:20Z", "age": 53 },
+        "registered": { "date": "2008-06-08T01:03:52Z", "age": 10 },
+        "phone": "(984)-561-9467",
+        "cell": "(838)-443-8255",
+        "id": { "name": "BSN", "value": "24067426" },
+        "picture": {
+          "large": "https://randomuser.me/api/portraits/women/17.jpg",
+          "medium":
+            "https://randomuser.me/api/portraits/med/women/17.jpg",
+          "thumbnail":
+            "https://randomuser.me/api/portraits/thumb/women/17.jpg"
+        },
+        "nat": "NL"
+      }
+    ]
+}
+
+
+  

@@ -6,14 +6,17 @@ import MapView, {Marker} from 'react-native-maps';
 import * as Location from 'expo-location';
 import * as ImagePicker from 'expo-image-picker';
 import NetInfo from '@react-native-community/netinfo';
+import {createTextMessage,createImageMessage,createLocationMessage} from '../utils/MessageUtils';
+import MessageList from './MessageList'
 
-const Chat = () => {
+const Chat = ({navigation,route}) => {
+    const usrid = route.params.id;
+    const usrname = route.params.name;
     const [keyboardStatus,setKeyboardStatus] = useState(undefined);
     const [text,setText] = useState("");
-    const [mockData,setmockData] = useState({
-        texts:[],
-        location:null
-    });
+
+    const [messages,setMessages] = useState([]);
+    const testing = JSON.stringify(messages);
     const [connectStatus,setConnectStatus] = useState(null);
     const [location,setLocation] = useState(null);
     const [errorMsg,seterrorMsg] = useState(null);
@@ -58,49 +61,56 @@ const Chat = () => {
         }
         let location = await Location.getCurrentPositionAsync({});
         setLocation(location);
-        setmockData((prevState)=>{
-            return{
-            ...prevState,
-            location:[location]
-        }});
+        setMessages((prevState)=>{
+            return(
+                [
+                    ...prevState,
+                    createLocationMessage({latitude:location.coords.latitude,longitude:location.coords.longitude})
+                ]
+            )
+        })
     }
     // const mockData = {"texts":["Hello","Hi"]};
-    let mockDataCount = 0;
-    for (let k in mockData.texts) if(mockData.texts.hasOwnProperty(k)) mockDataCount++;
+    // let mockDataCount = 0;
+    // for (let k in mockData.texts) if(mockData.texts.hasOwnProperty(k)) mockDataCount++;
 
     const onChangeChat = (inputText) => {
         setText(inputText)
     };
 
-    for (let i = 0; i < mockDataCount; i++){
-        texts.push(
-            <>
-            <Text style={styles.ChatText} key={i}>
-                {mockData.texts[i]}
-            </Text>
-            {mockData.location ?
-            <MapView style={styles.map} loadingEnabled={true}
-                region={{latitude:location.coords.latitude,longitude:location.coords.longitude,
-                latitudeDelta:0.01,longitudeDelta:0.01
-                }}>
-            <Marker coordinate={{latitude:location.coords.latitude,longitude:location.coords.longitude}}
-                title={"Title1"} />
-            </MapView>                   
-            : null   }     
-                {image != null ? <Image source={{uri:image}} style={{width:250,height:200,resizeMode:"contain"}} />
-                 : null}
-            </>
-        )
-    };
+    // for (let i = 0; i < mockDataCount; i++){
+    //     texts.push(
+    //         <>
+    //         <Text style={styles.ChatText} key={i}>
+    //             {mockData.texts[i]}
+    //         </Text>
+    //         {mockData.location ?
+    //         <MapView style={styles.map} loadingEnabled={true}
+    //             region={{latitude:location.coords.latitude,longitude:location.coords.longitude,
+    //             latitudeDelta:0.01,longitudeDelta:0.01
+    //             }}>
+    //         <Marker coordinate={{latitude:location.coords.latitude,longitude:location.coords.longitude}}
+    //             title={"Title1"} />
+    //         </MapView>                   
+    //         : null   }     
+    //         {image != null ? <Image source={{uri:image}} style={{width:250,height:200,resizeMode:"contain"}} />
+    //         : null}
+    //         </>
+    //     )
+    // };
     
     const pushText = () => {
-        setmockData((prevState)=>{
-            return{
-            ...prevState,
-            texts:[...mockData.texts,text]
-            }});
-        setText(null);
-    }
+        // const texts = createTextMessage(text);
+        setMessages((prevState)=>{
+            return(
+                [
+                    ...prevState,
+                    createTextMessage(text)
+                ]
+            )
+        })
+        setText("")
+        }
 
     const pickImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -110,19 +120,26 @@ const Chat = () => {
         })
         console.log(result)
         if(!result.cancelled){
-            setImage(result.uri)
+        setMessages((prevState)=>{
+            return(
+                [
+                    ...prevState,
+                    createImageMessage(result.uri)
+                ]
+            )
+        })
         }
     };
 
 
     return(
-        <View style={styles.ChatContainer}>
+        <>
+            <View style={styles.ChatContainer}>
             <View style={[styles.ChatArea,keyboardStatus == "Keyboard Hidden" || keyboardStatus == undefined
              ? styles.ChatAreaDown : styles.ChatAreaUp]}>
-             <StatusBar barStyle="dark-content" backgroundColor="#ffffff"/> {/* statusbar color change */}
-             <ScrollView>
-                {texts}
-            </ScrollView>
+             <StatusBar barStyle="dark-content" backgroundColor="#ffffff"/> 
+             {/* <Text>{testing}</Text> */}
+                <MessageList messages={messages}/>
             </View>
             <View style={styles.TypeBar}>
                     <EvilIcons onPress={pickImage}
@@ -132,16 +149,17 @@ const Chat = () => {
                     style={styles.TypeInput} placeholder="Type something!" onSubmitEditing={pushText} />
             </View>
         </View>
+        </>
     )
 }
 
 const styles = StyleSheet.create({
     ChatContainer:{
-        alignItems:"center",flex:1
+        alignItems:"center",flex:1,padding:0,margin:0
     },
     ChatArea:{
-        marginTop:50,borderWidth:0,width:"100%",height:"86%",
-        alignItems:"flex-end",padding:10
+        marginTop:0,borderWidth:0,width:"100%",height:"86%",
+        alignItems:"flex-end",padding:4
     },
     ChatText:{
         borderWidth:0,padding:10,borderRadius:30,backgroundColor:"#38c3f5",
