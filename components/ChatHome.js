@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from 'react';
 import {View,Image, Text,StyleSheet,TouchableOpacity,FlatList,StatusBar} from 'react-native';
-import { Entypo } from '@expo/vector-icons'; 
 import {fetchFriends} from '../utils/api';
 
 const ChatHome = ({navigation}) => {
@@ -18,8 +17,8 @@ const ChatHome = ({navigation}) => {
             <TouchableOpacity style={styles.chatBar} onPress={()=>navigation.navigate("Chat",{id:id,name:name})}>
                 <Image source={{uri:avatar}} style={{width:100,height:60,resizeMode:"contain",borderRadius:20}} />
                 <View>
-                    <Text style={{fontSize:20,fontWeight:"bold"}}>{name}</Text>
-                    <Text style={{fontSize:10}}>Chat preview</Text>
+                    <Text style={{fontSize:20,fontWeight:"bold",color:"black"}}>{name}</Text>
+                    <Text style={{fontSize:10,color:"black"}}>Chat preview</Text>
                 </View>
             </TouchableOpacity>
         )

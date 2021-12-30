@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
         height:"84%"
     },
     TypeBar:{
-        flex:1,borderTopWidth:0.2,width:"100%",paddingLeft:12,
+        flexGrow:1,borderTopWidth:0.2,width:"100%",paddingLeft:12,zIndex:3,
         flexDirection:"row",alignItems:"center"
     },
     TypeInput:{
